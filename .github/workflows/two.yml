@@ -11,4 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - echo "action_state=yellow" >> $GITHUB_ENV
+      - name: Set env
+        run: echo "GITHUB_SHA=refs/pull/1/merge" >> $GITHUB_ENV
       - run: echo "two"
